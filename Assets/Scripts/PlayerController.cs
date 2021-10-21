@@ -109,31 +109,5 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = true;
     }
-
-    void OnMouseDown()
-    {
-
-        Destroy(this.gameObject);
-
-        /*if (CurrentElement != PlayerController.Elements.Fire)
-        {
-            print("Wrong element type");
-        }
-
-
-        if (Vector3.Distance(player.transform.position, transform.position) <= 4 & player.gameObject.GetComponent<PlayerController>().CurrentElement == PlayerController.Elements.Fire)
-        {
-            print("Success!");
-            Destroy(gameObject);
-        }
-        else
-        {
-            if (player.gameObject.GetComponent<PlayerController>().CurrentElement == PlayerController.Elements.Fire)
-            {
-                print("Too far away");
-            }
-        }*/
-
-    }
     #endregion
 }
