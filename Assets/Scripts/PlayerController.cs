@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         Earth
     }
 
+    [field: SerializeField]
     public Elements CurrentElement { get; set; }
 
     #endregion
