@@ -356,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CurrentElement>k__BackingField: 0
   jumpForce: 8
-  speed: 16
+  speed: 8
 --- !u!61 &242960291
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Element>k__BackingField: 1
+  objectElement: 1
 --- !u!1 &875176825
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Element>k__BackingField: 4
+  objectElement: 4
 --- !u!61 &1396826743
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Element>k__BackingField: 3
+  objectElement: 3
 --- !u!61 &1591134002
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Element>k__BackingField: 2
+  objectElement: 2
 --- !u!61 &1713767745
 BoxCollider2D:
   m_ObjectHideFlags: 0
