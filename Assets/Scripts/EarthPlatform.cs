@@ -57,7 +57,7 @@ public class EarthPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player") && player.CurrentElement == PlayerController.Elements.Earth)
+        if (other.gameObject.CompareTag("Player"))
         {
             other.transform.SetParent(transform);
             canMove = true;
