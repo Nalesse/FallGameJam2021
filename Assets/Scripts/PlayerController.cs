@@ -11,6 +11,11 @@ public class PlayerController : MonoBehaviour
     public enum Elements
     {
         /// <summary>
+        /// No ability equipped
+        /// </summary>
+        None,
+
+        /// <summary>
         /// Burns obstacles
         /// </summary>
         Fire,
@@ -103,6 +108,32 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         isGrounded = true;
+    }
+
+    void OnMouseDown()
+    {
+
+        Destroy(this.gameObject);
+
+        /*if (CurrentElement != PlayerController.Elements.Fire)
+        {
+            print("Wrong element type");
+        }
+
+
+        if (Vector3.Distance(player.transform.position, transform.position) <= 4 & player.gameObject.GetComponent<PlayerController>().CurrentElement == PlayerController.Elements.Fire)
+        {
+            print("Success!");
+            Destroy(gameObject);
+        }
+        else
+        {
+            if (player.gameObject.GetComponent<PlayerController>().CurrentElement == PlayerController.Elements.Fire)
+            {
+                print("Too far away");
+            }
+        }*/
+
     }
     #endregion
 }
