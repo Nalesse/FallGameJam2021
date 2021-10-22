@@ -30,26 +30,22 @@ public class InteractableObject : MonoBehaviour
                 return;
             }
 
-            if (player.CurrentElement == PlayerController.Elements.Ice)
+            switch (this.player.CurrentElement)
             {
-                this.GetComponent<BoxCollider2D>().isTrigger = false;
-                this.GetComponent<SpriteRenderer>().color = new Color32(130, 241, 248, 108);
-                Debug.Log("Froze water");
-            }
-            else if (player.CurrentElement == PlayerController.Elements.Earth)
-            {
-                this.GetComponent<EarthPlatform>().enabled = true;
-                this.GetComponent<SpriteRenderer>().color = new Color32(9, 149, 41, 255);
-                Debug.Log("Move earth platform");
-            }
-            else if (player.CurrentElement == PlayerController.Elements.Fire)
-            {
-                Destroy(this.gameObject);
-                Debug.Log("Object burned");
-            }
-            else if (player.CurrentElement == PlayerController.Elements.Wind)
-            {
-                // double jump and higher jump force
+                case PlayerController.Elements.Ice:
+                    this.GetComponent<BoxCollider2D>().isTrigger = false;
+                    this.GetComponent<SpriteRenderer>().color = new Color32(130, 241, 248, 108);
+                    Debug.Log("Froze water");
+                    break;
+                case PlayerController.Elements.Earth:
+                    this.GetComponent<EarthPlatform>().enabled = true;
+                    this.GetComponent<SpriteRenderer>().color = new Color32(9, 149, 41, 255);
+                    Debug.Log("Move earth platform");
+                    break;
+                case PlayerController.Elements.Fire:
+                    Destroy(this.gameObject);
+                    Debug.Log("Object burned");
+                    break;
             }
         }
     }

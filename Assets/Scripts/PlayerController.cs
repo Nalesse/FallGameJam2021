@@ -39,12 +39,15 @@ public class PlayerController : MonoBehaviour
     [field: SerializeField]
     public Elements CurrentElement { get; set; }
 
+    public int JumpCount { get; set; }
+
     #endregion
 
     #region Privite Variables
     private Rigidbody2D playerRb;
-    private bool isGrounded;
     private bool canJump;
+
+    private int allowedJumps;
     #endregion
 
     #region Inspector Fields
@@ -57,12 +60,17 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         playerRb = transform.GetComponent<Rigidbody2D>();
+        JumpCount = 1;
+        allowedJumps = JumpCount;
+
     }
 
     // Update is called once per frame
     private void Update()
     {
         PlayerInput();
+        JumpCount = CurrentElement == Elements.Wind ? 2 : 1;
+        
     }
 
     private void FixedUpdate()
@@ -79,17 +87,28 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector2.right * Time.deltaTime * speed * horizontalInput);
 
-        // if the player is not on the ground the rest of the logic does not get executed
-        if (!isGrounded)
-        {
-            return;
-        }
 
         // Activates the jump function if the player presses "space" or "W".  
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {
-            canJump = true;
+            
+            if (allowedJumps > 0)
+            {
+                canJump = true;
+                allowedJumps -= 1;
+            }
+            else
+            {
+                canJump = false;
+            }
+
+            if (allowedJumps < 0)
+            {
+                allowedJumps = 0;
+            }
+
         }
+
     }
 
     private void Jump()
@@ -101,13 +120,15 @@ public class PlayerController : MonoBehaviour
         }
 
         playerRb.AddForce(this.transform.up * this.jumpForce, ForceMode2D.Impulse);
-        isGrounded = false;
         canJump = false;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        isGrounded = true;
+        allowedJumps = JumpCount;
     }
+    
+
+
     #endregion
 }
