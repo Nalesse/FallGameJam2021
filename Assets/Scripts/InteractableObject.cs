@@ -7,88 +7,47 @@ public class InteractableObject : MonoBehaviour
 {
     private PlayerController player;
 
-    //public enum ObjectElement
-    //{
-    //    /// <summary>
-    //    /// No ability equipped
-    //    /// </summary>
-    //    None,
-
-    //    /// <summary>
-    //    /// Burns obstacles
-    //    /// </summary>
-    //    Fire,
-
-    //    /// <summary>
-    //    /// To be Determined
-    //    /// </summary>
-    //    Wind,
-
-    //    /// <summary>
-    //    /// Freezes water
-    //    /// </summary>
-    //    Ice,
-
-    //    /// <summary>
-    //    /// Shoots platforms
-    //    /// </summary>
-    //    Earth
-    //}
-
     [SerializeField] private PlayerController.Elements objectElement;
-
-    //[field: SerializeField]
-    //public ObjectElement Element { get; set; }
+    private EarthPlatform earthPlatform;
 
     private void Awake()
     {
         player = GameObject.FindObjectOfType<PlayerController>();
+        earthPlatform = GameObject.FindObjectOfType<EarthPlatform>();
     }
-
-    /*private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player") & player.gameObject.GetComponent<PlayerController>().CurrentElement == PlayerController.Elements.Fire)
-        {
-            Destroy(gameObject);
-        }
-    }*/
 
     private void OnMouseDown()
     {
-        //if ((int)gameObject.GetComponent<InteractableObject>().Element != (int)player.gameObject.GetComponent<PlayerController>().CurrentElement)
-        //{
-        //    print("Wrong element type");
-        //}
 
         if (objectElement != player.CurrentElement)
         {
             Debug.Log("Wrong element type");
         }
 
-
-        //if (Vector3.Distance(player.transform.position, transform.position) <= 4 & (int)gameObject.GetComponent<InteractableObject>().Element == (int)player.gameObject.GetComponent<PlayerController>().CurrentElement)
-        //{
-        //    print("Success!");
-        //    Destroy(gameObject);
-        //}
-        //else
-        //{
-        //    if ((int)gameObject.GetComponent<InteractableObject>().Element == (int)player.gameObject.GetComponent<PlayerController>().CurrentElement)
-        //    {
-        //        print("Too far away");
-        //    }   
-        //}
-
-        if (!(Vector3.Distance(player.transform.position, transform.position) <= 4))
-        {
-            Debug.Log("Too far away");
-            return;
-        }
-
         if (objectElement == player.CurrentElement)
         {
-            Debug.Log("Success!");
-            Destroy(gameObject);
+            if (!(Vector2.Distance(player.transform.position, transform.position) <= 6))
+            {
+                Debug.Log("Too far away");
+                return;
+            }
+
+            switch (this.player.CurrentElement)
+            {
+                case PlayerController.Elements.Ice:
+                    this.GetComponent<BoxCollider2D>().isTrigger = false;
+                    this.GetComponent<SpriteRenderer>().color = new Color32(130, 241, 248, 108);
+                    Debug.Log("Froze water");
+                    break;
+                case PlayerController.Elements.Earth:
+                    earthPlatform.canMove = true;
+                    Debug.Log("Move earth platform");
+                    break;
+                case PlayerController.Elements.Fire:
+                    Destroy(this.gameObject);
+                    Debug.Log("Object burned");
+                    break;
+            }
         }
     }
 }

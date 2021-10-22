@@ -5,45 +5,54 @@ using UnityEngine;
 
 public class EarthPlatform : MonoBehaviour
 {
+    public bool Activated { get; set; }
+
     [SerializeField] private Vector2 endPosition;
     [SerializeField] private Vector2 startPosition;
     [SerializeField] private float moveSpeed;
 
     [SerializeField] private bool moveUp;
 
-    private bool canMove;
+    public bool canMove;
+
+    private PlayerController player;
+
+    private void Awake()
+    {
+        player = GameObject.FindObjectOfType<PlayerController>();
+    }
 
     // Update is called once per frame
     private void Update()
     {
-        this.MovePlatform();
+        MovePlatform();
     }
 
     private void MovePlatform()
     {
 
-        if (!this.canMove)
+        if (!canMove)
         {
             return;
         }
 
         // Using Math.Abs to avoid floating point comparison issues
-        if (Math.Abs(this.transform.position.y - this.startPosition.y) < .01)
+        if (Math.Abs(transform.position.y - startPosition.y) < .01)
         {
-            this.moveUp = true;
+            moveUp = true;
         }
-        else if (Math.Abs(this.transform.position.y - this.endPosition.y) < .01)
+        else if (Math.Abs(transform.position.y - endPosition.y) < .01)
         {
-            this.moveUp = false;
+            moveUp = false;
         }
 
         if (moveUp)
         {
-            transform.position = Vector2.MoveTowards(transform.position, endPosition, this.moveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, endPosition, moveSpeed * Time.deltaTime);
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, startPosition, this.moveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, startPosition, moveSpeed * Time.deltaTime);
         }
     }
 
@@ -53,7 +62,7 @@ public class EarthPlatform : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.transform.SetParent(transform);
-            canMove = true;
+            //canMove = true;
         }
     }
 
@@ -62,6 +71,7 @@ public class EarthPlatform : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             canMove = false;
+            other.transform.SetParent(null);
         }
     }
 }
