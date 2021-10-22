@@ -87,26 +87,39 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector2.right * Time.deltaTime * speed * horizontalInput);
 
+        // Flips the player depending on the direction they are walking
+        var character = transform.GetChild(0);
+        var playerRotation = character.localEulerAngles;
+        if (horizontalInput < 0)
+        {
+            playerRotation.y = -180;
+            character.transform.rotation = Quaternion.Euler(playerRotation);
+        }
+        else if (horizontalInput > 0)
+        {
+            playerRotation.y = 0;
+            character.transform.rotation = Quaternion.Euler(playerRotation);
+        }
 
         // Activates the jump function if the player presses "space" or "W".  
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
+        if (!Input.GetKeyDown(KeyCode.Space) && !Input.GetKeyDown(KeyCode.W))
         {
+            return;
+        }
             
-            if (allowedJumps > 0)
-            {
-                canJump = true;
-                allowedJumps -= 1;
-            }
-            else
-            {
-                canJump = false;
-            }
+        if (allowedJumps > 0)
+        {
+            canJump = true;
+            allowedJumps -= 1;
+        }
+        else
+        {
+            canJump = false;
+        }
 
-            if (allowedJumps < 0)
-            {
-                allowedJumps = 0;
-            }
-
+        if (allowedJumps < 0)
+        {
+            allowedJumps = 0;
         }
 
     }
