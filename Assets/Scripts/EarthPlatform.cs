@@ -11,7 +11,8 @@ public class EarthPlatform : MonoBehaviour
     [SerializeField] private Vector2 startPosition;
     [SerializeField] private float moveSpeed;
 
-    [SerializeField] private bool moveUp;
+    [SerializeField] private bool move = true;
+    [SerializeField] private bool vertical;
 
     public bool canMove;
 
@@ -36,17 +37,35 @@ public class EarthPlatform : MonoBehaviour
             return;
         }
 
-        // Using Math.Abs to avoid floating point comparison issues
-        if (Math.Abs(transform.position.y - startPosition.y) < .01)
+        if (!vertical)
         {
-            moveUp = true;
+            // Using Math.Abs to avoid floating point comparison issues
+            if (Math.Abs(transform.position.x - startPosition.x) < .01)
+            {
+                move = true;
+            }
+            else if (Math.Abs(transform.position.x - endPosition.x) < .01)
+            {
+                move = false;
+            }
+
+
         }
-        else if (Math.Abs(transform.position.y - endPosition.y) < .01)
+        else if (vertical)
         {
-            moveUp = false;
+            // Using Math.Abs to avoid floating point comparison issues
+            if (Math.Abs(transform.position.y - startPosition.y) < .01)
+            {
+                move = true;
+            }
+            else if (Math.Abs(transform.position.y - endPosition.y) < .01)
+            {
+                move = false;
+            }
         }
 
-        if (moveUp)
+
+        if (move)
         {
             transform.position = Vector2.MoveTowards(transform.position, endPosition, moveSpeed * Time.deltaTime);
         }
@@ -61,9 +80,7 @@ public class EarthPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //canMove = true;
             other.transform.SetParent(transform);
-            
         }
     }
 

@@ -125,7 +125,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        allowedJumps = JumpCount;
+        Vector3 dir = (other.gameObject.transform.position - gameObject.transform.position).normalized;
+        if (dir.y < 0 & playerRb.velocity == new Vector2(0,0))
+        {
+            allowedJumps = JumpCount;
+        }
     }
     
 

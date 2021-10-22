@@ -19,8 +19,8 @@ public class InteractableObject : MonoBehaviour
         player = GameObject.FindObjectOfType<PlayerController>();
         objectCollider = this.gameObject.GetComponent<BoxCollider2D>();
         objectSprite = this.gameObject.GetComponent<SpriteRenderer>();
-        earthPlatform = GameObject.FindObjectOfType<EarthPlatform>();
-        acid = GameObject.FindObjectOfType<Acid>();
+        earthPlatform = this.gameObject.GetComponent<EarthPlatform>();
+        acid = this.gameObject.GetComponent<Acid>();
     }
 
     private void OnMouseDown()
@@ -33,7 +33,7 @@ public class InteractableObject : MonoBehaviour
 
         if (objectElement == player.CurrentElement)
         {
-            if (!(Vector2.Distance(player.transform.position, transform.position) <= 6))
+            if (!(Vector2.Distance(player.transform.position, transform.position) <= 7))
             {
                 Debug.Log("Too far away");
                 return;
@@ -43,9 +43,12 @@ public class InteractableObject : MonoBehaviour
             {
                 case PlayerController.Elements.Ice:
                     acid.KillPlayer = false;
+                    objectCollider.isTrigger = false;
+                    objectSprite.color = new Color32(130, 241, 248, 108);
                     Debug.Log("Froze water");
                     break;
                 case PlayerController.Elements.Earth:
+                    this.earthPlatform.enabled = true;
                     this.earthPlatform.canMove = true;
                     Debug.Log("Move earth platform");
                     break;

@@ -33,9 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/WindLevelBig.unity
     guid: 7bf39fe3e3cc91a40b1a9f004168232c
   - enabled: 1
-    path: Assets/Scenes/FinalLevelOne.unity
-    guid: dc1c6b076b52e7a438e820d126140e22
-  - enabled: 1
-    path: Assets/Scenes/FinalLevelTwo.unity
-    guid: cb1692831ffb2fc44ac8c9ae6f30c4a4
+    path: Assets/Scenes/WinningScreen.unity
+    guid: 53f6c7bc6ce91c8489a415e7a1792180
   m_configObjects: {}
