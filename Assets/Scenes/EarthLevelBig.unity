@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -148,10 +148,10 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321182808}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 448963106}
   - component: {fileID: 448963105}
   - component: {fileID: 448963104}
+  - component: {fileID: 448963108}
   m_Layer: 0
   m_Name: EarthObject (12)
   m_TagString: Untagged
@@ -260,7 +261,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 448963103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -355,6 +356,22 @@ Transform:
   m_Father: {fileID: 1580806877}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &448963108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448963103}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &472605857
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +493,7 @@ GameObject:
   - component: {fileID: 497455380}
   - component: {fileID: 497455379}
   - component: {fileID: 497455378}
+  - component: {fileID: 497455381}
   m_Layer: 0
   m_Name: EarthObject (17)
   m_TagString: Untagged
@@ -506,7 +524,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 497455376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -587,6 +605,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &497455381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497455376}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &547917477
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +633,7 @@ GameObject:
   - component: {fileID: 547917480}
   - component: {fileID: 547917479}
   - component: {fileID: 547917478}
+  - component: {fileID: 547917482}
   m_Layer: 0
   m_Name: EarthObject (3)
   m_TagString: Untagged
@@ -615,7 +650,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 547917477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -710,6 +745,22 @@ Transform:
   m_Father: {fileID: 1580806877}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &547917482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547917477}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &560611432
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +773,7 @@ GameObject:
   - component: {fileID: 560611436}
   - component: {fileID: 560611435}
   - component: {fileID: 560611434}
+  - component: {fileID: 560611437}
   m_Layer: 0
   m_Name: EarthObject (14)
   m_TagString: Untagged
@@ -752,7 +804,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 560611432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -833,6 +885,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &560611437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560611432}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &660356724
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,6 +913,7 @@ GameObject:
   - component: {fileID: 660356727}
   - component: {fileID: 660356726}
   - component: {fileID: 660356725}
+  - component: {fileID: 660356729}
   m_Layer: 0
   m_Name: EarthObject (7)
   m_TagString: Untagged
@@ -861,7 +930,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 660356724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -956,6 +1025,22 @@ Transform:
   m_Father: {fileID: 1580806877}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &660356729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660356724}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &791919816
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,6 +1053,7 @@ GameObject:
   - component: {fileID: 791919819}
   - component: {fileID: 791919818}
   - component: {fileID: 791919817}
+  - component: {fileID: 791919821}
   m_Layer: 0
   m_Name: EarthObject (4)
   m_TagString: Untagged
@@ -984,7 +1070,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 791919816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -1079,6 +1165,22 @@ Transform:
   m_Father: {fileID: 1580806877}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &791919821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791919816}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &798351584
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,6 +1193,7 @@ GameObject:
   - component: {fileID: 798351588}
   - component: {fileID: 798351587}
   - component: {fileID: 798351586}
+  - component: {fileID: 798351589}
   m_Layer: 0
   m_Name: EarthObject (15)
   m_TagString: Untagged
@@ -1121,7 +1224,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 798351584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -1202,6 +1305,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &798351589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798351584}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &830672003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,6 +1333,7 @@ GameObject:
   - component: {fileID: 830672007}
   - component: {fileID: 830672006}
   - component: {fileID: 830672005}
+  - component: {fileID: 830672008}
   m_Layer: 0
   m_Name: EarthObject (13)
   m_TagString: Untagged
@@ -1244,7 +1364,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 830672003}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -1325,6 +1445,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &830672008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830672003}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &874909257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1337,6 +1473,7 @@ GameObject:
   - component: {fileID: 874909260}
   - component: {fileID: 874909259}
   - component: {fileID: 874909258}
+  - component: {fileID: 874909262}
   m_Layer: 0
   m_Name: EarthObject (5)
   m_TagString: Untagged
@@ -1353,7 +1490,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 874909257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -1448,6 +1585,22 @@ Transform:
   m_Father: {fileID: 1580806877}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874909262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874909257}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &968393228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,6 +1613,7 @@ GameObject:
   - component: {fileID: 968393231}
   - component: {fileID: 968393230}
   - component: {fileID: 968393229}
+  - component: {fileID: 968393233}
   m_Layer: 0
   m_Name: EarthObject (9)
   m_TagString: Untagged
@@ -1476,7 +1630,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 968393228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -1571,6 +1725,22 @@ Transform:
   m_Father: {fileID: 1580806877}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &968393233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968393228}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &1072836642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,6 +1753,7 @@ GameObject:
   - component: {fileID: 1072836645}
   - component: {fileID: 1072836644}
   - component: {fileID: 1072836643}
+  - component: {fileID: 1072836647}
   m_Layer: 0
   m_Name: EarthObject (10)
   m_TagString: Untagged
@@ -1599,7 +1770,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1072836642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -1694,6 +1865,22 @@ Transform:
   m_Father: {fileID: 1580806877}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1072836647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072836642}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &1217772572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,6 +2096,7 @@ GameObject:
   - component: {fileID: 1488163004}
   - component: {fileID: 1488163003}
   - component: {fileID: 1488163002}
+  - component: {fileID: 1488163005}
   m_Layer: 0
   m_Name: exit
   m_TagString: Untagged
@@ -1923,10 +2111,10 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488163001}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2007,6 +2195,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1488163005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488163001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77fbe0da4c0dc54f860b11071e76dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1525983984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,6 +2219,7 @@ GameObject:
   - component: {fileID: 1525983987}
   - component: {fileID: 1525983986}
   - component: {fileID: 1525983985}
+  - component: {fileID: 1525983989}
   m_Layer: 0
   m_Name: EarthObject (8)
   m_TagString: Untagged
@@ -2035,7 +2236,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1525983984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -2130,6 +2331,22 @@ Transform:
   m_Father: {fileID: 1580806877}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1525983989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525983984}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &1580806876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,6 +2599,7 @@ GameObject:
   - component: {fileID: 1672080758}
   - component: {fileID: 1672080757}
   - component: {fileID: 1672080756}
+  - component: {fileID: 1672080760}
   m_Layer: 0
   m_Name: EarthObject (6)
   m_TagString: Untagged
@@ -2398,7 +2616,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1672080755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -2493,6 +2711,22 @@ Transform:
   m_Father: {fileID: 1580806877}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1672080760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672080755}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &1740336735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,6 +2848,7 @@ GameObject:
   - component: {fileID: 1928883147}
   - component: {fileID: 1928883146}
   - component: {fileID: 1928883145}
+  - component: {fileID: 1928883148}
   m_Layer: 0
   m_Name: EarthObject (18)
   m_TagString: Untagged
@@ -2644,7 +2879,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1928883143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -2725,6 +2960,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1928883148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928883143}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &1982519472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,12 +3031,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1982519472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c3e529891443b64aa6645a87d1713f1, type: 3}
+  m_Script: {fileID: 11500000, guid: cc447f846683c3d4081607ebec28e7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CurrentElement>k__BackingField: 0
-  jumpForce: 4
-  speed: 5
+  <CurrentElement>k__BackingField: 4
+  allowedJumps: 0
+  jumpForce: 8
+  speed: 6
 --- !u!50 &1982519475
 Rigidbody2D:
   serializedVersion: 4
@@ -2844,8 +3096,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1308604707
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
@@ -2884,6 +3136,7 @@ GameObject:
   - component: {fileID: 2040830445}
   - component: {fileID: 2040830444}
   - component: {fileID: 2040830443}
+  - component: {fileID: 2040830447}
   m_Layer: 0
   m_Name: EarthObject (2)
   m_TagString: Untagged
@@ -2900,7 +3153,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2040830442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -2995,6 +3248,22 @@ Transform:
   m_Father: {fileID: 1580806877}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2040830447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040830442}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &2065412488
 GameObject:
   m_ObjectHideFlags: 0
@@ -3007,6 +3276,7 @@ GameObject:
   - component: {fileID: 2065412492}
   - component: {fileID: 2065412491}
   - component: {fileID: 2065412490}
+  - component: {fileID: 2065412493}
   m_Layer: 0
   m_Name: EarthObject (16)
   m_TagString: Untagged
@@ -3037,7 +3307,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2065412488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -3118,6 +3388,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2065412493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065412488}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &2082159802
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,6 +3416,7 @@ GameObject:
   - component: {fileID: 2082159805}
   - component: {fileID: 2082159804}
   - component: {fileID: 2082159803}
+  - component: {fileID: 2082159807}
   m_Layer: 0
   m_Name: EarthObject (11)
   m_TagString: Untagged
@@ -3146,7 +3433,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2082159802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -3241,6 +3528,22 @@ Transform:
   m_Father: {fileID: 1580806877}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2082159807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082159802}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0
 --- !u!1 &2101639015
 GameObject:
   m_ObjectHideFlags: 0
@@ -3253,6 +3556,7 @@ GameObject:
   - component: {fileID: 2101639018}
   - component: {fileID: 2101639017}
   - component: {fileID: 2101639016}
+  - component: {fileID: 2101639020}
   m_Layer: 0
   m_Name: EarthObject (1)
   m_TagString: Untagged
@@ -3269,7 +3573,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2101639015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37aa81f96b7770f409595043c601f2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: b556de9c59e561e4883c4d88e45651e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectElement: 4
@@ -3364,3 +3668,19 @@ Transform:
   m_Father: {fileID: 1580806877}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2101639020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101639015}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a5572a7b07d141a9d26b0d096dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  moveSpeed: 0
+  moveUp: 0

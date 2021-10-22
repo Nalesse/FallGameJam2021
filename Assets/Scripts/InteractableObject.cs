@@ -6,14 +6,19 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour
 {
     private PlayerController player;
+    private BoxCollider2D objectCollider;
+    private SpriteRenderer objectSprite;
+    private EarthPlatform earthPlatform;
+
 
     [SerializeField] private PlayerController.Elements objectElement;
-    private EarthPlatform earthPlatform;
 
     private void Awake()
     {
         player = GameObject.FindObjectOfType<PlayerController>();
-        earthPlatform = GameObject.FindObjectOfType<EarthPlatform>();
+        objectCollider = this.gameObject.GetComponent<BoxCollider2D>();
+        objectSprite = this.gameObject.GetComponent<SpriteRenderer>();
+        earthPlatform = this.gameObject.GetComponent<EarthPlatform>();
     }
 
     private void OnMouseDown()
@@ -35,11 +40,12 @@ public class InteractableObject : MonoBehaviour
             switch (this.player.CurrentElement)
             {
                 case PlayerController.Elements.Ice:
-                    this.GetComponent<BoxCollider2D>().isTrigger = false;
-                    this.GetComponent<SpriteRenderer>().color = new Color32(130, 241, 248, 108);
+                    objectCollider.isTrigger = false;
+                    objectSprite.color = new Color32(130, 241, 248, 108);
                     Debug.Log("Froze water");
                     break;
                 case PlayerController.Elements.Earth:
+                    earthPlatform.enabled = true;
                     earthPlatform.canMove = true;
                     Debug.Log("Move earth platform");
                     break;
