@@ -20,6 +20,7 @@ public class InteractableObject : MonoBehaviour
         objectCollider = this.gameObject.GetComponent<BoxCollider2D>();
         objectSprite = this.gameObject.GetComponent<SpriteRenderer>();
         earthPlatform = GameObject.FindObjectOfType<EarthPlatform>();
+        acid = GameObject.FindObjectOfType<Acid>();
     }
 
     private void OnMouseDown()
@@ -41,7 +42,7 @@ public class InteractableObject : MonoBehaviour
             switch (player.CurrentElement)
             {
                 case PlayerController.Elements.Ice:
-                    
+                    acid.KillPlayer = false;
                     Debug.Log("Froze water");
                     break;
                 case PlayerController.Elements.Earth:
