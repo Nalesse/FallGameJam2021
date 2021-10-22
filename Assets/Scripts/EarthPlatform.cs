@@ -61,8 +61,9 @@ public class EarthPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.transform.SetParent(transform);
             //canMove = true;
+            other.transform.SetParent(transform);
+            
         }
     }
 

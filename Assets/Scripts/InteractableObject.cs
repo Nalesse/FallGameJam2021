@@ -9,6 +9,7 @@ public class InteractableObject : MonoBehaviour
     private BoxCollider2D objectCollider;
     private SpriteRenderer objectSprite;
     private EarthPlatform earthPlatform;
+    private Acid acid;
 
 
     [SerializeField] private PlayerController.Elements objectElement;
@@ -18,7 +19,7 @@ public class InteractableObject : MonoBehaviour
         player = GameObject.FindObjectOfType<PlayerController>();
         objectCollider = this.gameObject.GetComponent<BoxCollider2D>();
         objectSprite = this.gameObject.GetComponent<SpriteRenderer>();
-        earthPlatform = this.gameObject.GetComponent<EarthPlatform>();
+        earthPlatform = GameObject.FindObjectOfType<EarthPlatform>();
     }
 
     private void OnMouseDown()
@@ -37,16 +38,14 @@ public class InteractableObject : MonoBehaviour
                 return;
             }
 
-            switch (this.player.CurrentElement)
+            switch (player.CurrentElement)
             {
                 case PlayerController.Elements.Ice:
-                    objectCollider.isTrigger = false;
-                    objectSprite.color = new Color32(130, 241, 248, 108);
+                    
                     Debug.Log("Froze water");
                     break;
                 case PlayerController.Elements.Earth:
-                    earthPlatform.enabled = true;
-                    earthPlatform.canMove = true;
+                    this.earthPlatform.canMove = true;
                     Debug.Log("Move earth platform");
                     break;
                 case PlayerController.Elements.Fire:
