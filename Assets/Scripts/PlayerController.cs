@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb;
     private bool canJump;
 
-    private int allowedJumps;
+    public int allowedJumps;
     #endregion
 
     #region Inspector Fields
