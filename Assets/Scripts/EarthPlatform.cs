@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class EarthPlatform : MonoBehaviour
 {
+    public bool Activated { get; set; }
+
     [SerializeField] private Vector2 endPosition;
     [SerializeField] private Vector2 startPosition;
     [SerializeField] private float moveSpeed;
 
     [SerializeField] private bool moveUp;
 
-    private bool canMove;
+    public bool canMove;
 
     private PlayerController player;
 
@@ -60,7 +62,7 @@ public class EarthPlatform : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.transform.SetParent(transform);
-            canMove = true;
+            //canMove = true;
         }
     }
 

@@ -19,7 +19,6 @@ public class PowerUp : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             player.CurrentElement = powerUpType;
-            this.player.AllowedJumps = this.player.JumpCount;
             Destroy(gameObject);
         }
     }

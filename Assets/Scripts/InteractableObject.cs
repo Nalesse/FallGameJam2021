@@ -8,10 +8,12 @@ public class InteractableObject : MonoBehaviour
     private PlayerController player;
 
     [SerializeField] private PlayerController.Elements objectElement;
+    private EarthPlatform earthPlatform;
 
     private void Awake()
     {
         player = GameObject.FindObjectOfType<PlayerController>();
+        earthPlatform = GameObject.FindObjectOfType<EarthPlatform>();
     }
 
     private void OnMouseDown()
@@ -38,8 +40,7 @@ public class InteractableObject : MonoBehaviour
                     Debug.Log("Froze water");
                     break;
                 case PlayerController.Elements.Earth:
-                    this.GetComponent<EarthPlatform>().enabled = true;
-                    this.GetComponent<SpriteRenderer>().color = new Color32(9, 149, 41, 255);
+                    earthPlatform.canMove = true;
                     Debug.Log("Move earth platform");
                     break;
                 case PlayerController.Elements.Fire:
